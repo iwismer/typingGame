@@ -15,7 +15,7 @@ class Player {
     yPos = 1000;
     xSpeed = 3;
     //load the image
-    photo = loadImage("ship.png");
+    photo = loadImage("include/ship.png");
   }
 
 //getters and setters

@@ -30,10 +30,10 @@ void setup() {
   frameRate(60);
   size(1500, 1500);
   //create ht font I use
-  PFont f = createFont("Anonymous.ttf", 30);
+  PFont f = createFont("include/Anonymous.ttf", 30);
   textFont(f);
   //read the words
-  BufferedReader r = createReader("wordlist.txt");
+  BufferedReader r = createReader("include/wordlist.txt");
   try {
     //my list is supposed to be the 1000 most used english words
     for (int i = 0; i < 1000; i++) {
@@ -44,18 +44,18 @@ void setup() {
     e.printStackTrace();
   }
   //import the images I use
-  spark = loadImage("spark.png");
-  imgEnemy = loadImage("enemy.png");
+  spark = loadImage("include/spark.png");
+  imgEnemy = loadImage("include/enemy.png");
   planets = new PImage[4];
   stars = new PImage[4];
   for (int i = 0; i < 4; i++) {
-    planets[i] = loadImage("planet" + i + ".png");
-    stars[i] = loadImage("star" + i + ".png");
+    planets[i] = loadImage("include/planet" + i + ".png");
+    stars[i] = loadImage("include/star" + i + ".png");
   }
   //import the highscores
   name = "";
   highscores = new ArrayList();
-  Scanner s = new Scanner(createReader("highscores.txt"));
+  Scanner s = new Scanner(createReader("include/highscores.txt"));
   while (s.hasNextLine()) {
     String[] line = new String[4];
     for (int i = 0; i < 4; i++) {
